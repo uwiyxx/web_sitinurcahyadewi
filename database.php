@@ -1,11 +1,11 @@
 <?php 
     $koneksi = new mysqli("localhost","root","","uprak_dewi");
 
-    $query = "select * from buku";
+    $query = "select * from kasir";
 
     $hasil =$koneksi->query($query);
   
-    $buku =[];
+    $kasir =[];
 
     while($item =$hasil->fetch_assoc()){
         $buku[]=$item;
