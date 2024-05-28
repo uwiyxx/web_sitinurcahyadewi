@@ -1,9 +1,13 @@
 <?php 
-    $koneksi = new mysqli("localhost", "root", "", "uprak_dewi");
+    $koneksi = new mysqli("localhost","root","","uprak_dewi");
 
-    if ($mysql->connect_error) {
-        die("". $koneksi->connect_error);
+    $query = "select * from buku";
 
-        }
-    
+    $hasil =$koneksi->query($query);
+  
+    $buku =[];
+
+    while($item =$hasil->fetch_assoc()){
+        $buku[]=$item;
+}
 ?>
