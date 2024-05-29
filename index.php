@@ -2,6 +2,17 @@
 include "layout/header.php";
 ?>
 
+
+
+<?php
+include "assets/database.php";
+
+$sql = "select * from spp";
+
+$hasil =$koneksi->query($query);
+
+?>
+
 <body>
 
   <!-- ======= Header ======= -->
@@ -276,7 +287,7 @@ include "layout/header.php";
           <span>Dashboard</span>
         </a>
       </li><!-- End Blank Page Nav -->
-
+ 
     </ul>
 
   </aside><!-- End Sidebar-->
@@ -284,7 +295,7 @@ include "layout/header.php";
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Blank Page</h1>
+      <!-- <h1>Dashboard</h1> -->
      
     </div><!-- End Page Title -->
 
@@ -292,29 +303,32 @@ include "layout/header.php";
       <div class="row">
         <div class="col-lg-6">
 
-          <div class="card">
+          <!-- <div class="card">
             <div class="card-body">
               <h5 class="card-title">Example Card</h5>
               <p>This is an examle page with no contrnt. You can use it as a starter for your custom pages.</p>
             </div>
           </div>
 
-        </div>
+        </div> -->
 
         <div class="col-lg-6">
 
-          <div class="card">
+          <!-- <div class="card">
             <div class="card-body">
               <h5 class="card-title">Example Card</h5>
               <p>This is an examle page with no contrnt. You can use it as a starter for your custom pages.</p>
             </div>
-          </div>
+          </div> -->
 
         </div>
       </div>
     </section>
 
   </main><!-- End #main -->
+  <?php 
+include "spp/create.php";
+?>
 
   <?php 
   include "layout/footer.php";
