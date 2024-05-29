@@ -2,8 +2,6 @@
 include "layout/header.php";
 ?>
 
-
-
 <?php
 include "assets/database.php";
 
