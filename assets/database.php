@@ -1,7 +1,7 @@
 <?php 
     $koneksi = new mysqli("localhost","root","","uprak_dewi");
 
-    $query = "select * from spp";
+    $query = "select * from data_siswa";
 
     $hasil =$koneksi->query($query);
   
