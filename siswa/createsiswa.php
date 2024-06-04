@@ -15,7 +15,7 @@
         <div class="mb-3">
             <label for="id" class="form-label">nis</label>
             <input type="text" class="form-control" id="id" name="id">
-        </div>
+        </div> 
         <div class="mb-3">
             <label for="tahun" class="form-label">nama_lengkap</label>
             <input type="text" class="form-control" id="tahun" name="tahun">
