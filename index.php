@@ -1,7 +1,7 @@
 <?php
 include "assets/database.php";
 
-$sql = "select * data_siswa";
+$sql = "select * from data_siswa";
 
 $hasil = $koneksi->query($sql);
 
@@ -331,30 +331,38 @@ include "layout/header.php";
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">id</th>
-                                <th scope="col">tahun</th>
-                                <th scope="col">nominal</th>
+                                <th scope="col">nis</th>
+                                <th scope="col">nama_lengkap</th>
+                                <th scope="col">alamat</th>
+                                <th scope="col">kelas</th>
+                                <th scope="col">spp</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php $a = 1; ?>
-                            <?php foreach ($hasil as $terserah) { ?>
+                            <?php foreach ($hasil as $bebas) { ?>
                                 <tr>
                                     <th scope="row">
                                         <?= $a; ?>
                                     </th>
                                     <td>
-                                        <?= $terserah['id']; ?>
+                                        <?= $bebas['nis']; ?>
                                     </td>
                                     <td>
-                                        <?= $terserah['tahun']; ?>
+                                        <?= $bebas['nama_lengkap']; ?>
                                     </td>
                                     <td>
-                                        <?= $terserah['nominal']; ?>
+                                        <?= $bebas['alamat']; ?>
                                     </td>
                                     <td>
-                                        <a href="edit.php?id=<?= $terserah['id']; ?>" class="btn btn-primary">edit</a>
-                                        <a href="delete.php?id=<?= $terserah['id']; ?>" class="btn btn-danger">hapus</a>
+                                        <?= $bebas['kelas_id']; ?>
+                                    </td>
+                                    <td>
+                                        <?= $bebas['spp_id']; ?>
+                                    </td>
+                                    <td>
+                                        <a href="edit.php?id=<?= $bebas['nis']; ?>" class="btn btn-primary">edit</a>
+                                        <a href="delete.php?id=<?= $bebas['nis']; ?>" class="btn btn-danger">hapus</a>
                                     </td>
                                 </tr>
                             <?php $a++;
@@ -372,7 +380,7 @@ include "layout/header.php";
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
+                        <!-- <span>Copyright &copy; Your Website 2021</span> -->
                     </div>
                 </div>
             </footer>
@@ -420,7 +428,7 @@ include "layout/header.php";
     <!-- Page level custom scripts -->
     <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script>
-    <?php include "layout/fother.php"; ?>
+    <?php include "layout/footer.php"; ?>
 </body>
 
 </html>
