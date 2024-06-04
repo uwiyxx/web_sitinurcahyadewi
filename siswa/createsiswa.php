@@ -25,7 +25,11 @@
             <input type="text" class="form-control" id="nominal " name="nominal">
         </div>
         <div class="mb-3">
-            <label for="nominal" class="form-label">kelas</label>
+            <label for="nominal" class="form-label">kelas_id</label>
+            <input type="text" class="form-control" id="nominal " name="nominal">
+        </div>
+        <div class="mb-3">
+            <label for="nominal" class="form-label">spp_id</label>
             <input type="text" class="form-control" id="nominal " name="nominal">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
